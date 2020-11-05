@@ -1,8 +1,15 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
 <h1>Owais's Portfolio</h1>
+
+<a href="{% url 'blog:all_blogs' %}">All Blogs</a>
 
 {% load static %}
 
-<img src="{% static 'porfolio/Passport_size.jpg' %}" alt="It's a me, Mario">
+<a href="{% static 'portfolio/Owais_CV_2.pdf' %}">Resume</a>
+
+<img src="{% static 'portfolio/Passport_size.jpg' %}" alt="It's a me, Mario" width="400px">
 
 {% for project in projects %}
 
@@ -11,3 +18,5 @@
 <img src="{{project.image.url}}" alt="an image" height= 100px >
 
 {% endfor %}
+
+{% endblock %}
