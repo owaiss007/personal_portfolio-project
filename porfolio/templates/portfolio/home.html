@@ -1,4 +1,9 @@
 <h1>Owais's Portfolio</h1>
+
+{% load static %}
+
+<img src="{% static 'porfolio/Passport_size.jpg' %}" alt="It's a me, Mario">
+
 {% for project in projects %}
 
 <h2>{{project.titlehead}}</h2>
